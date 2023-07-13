@@ -13,3 +13,26 @@
 
 
 #Unit Test 
+Input 
+Insert new Document :
+Notification_Status__c = New 
+Document Type : Report
+Client : test@gmail.com
+File : Attachment1.txt
+
+Notification_Status__c = New 
+Document Type : Report
+Client : test@gmail.com
+File : Attachment2.txt
+
+Notification_Status__c = New 
+Document Type : Transactional
+Client : test@gmail.com
+File : Attachment1.txt
+
+Output : 
+Email Sent 2 to test@gmail.com 
+1 - Summary email 
+Document Type Report - with 2 Files Attachment1.txt & Attachment2.txt
+1 - email
+Document Type Transactional - with 1 Files Attachment1.txt
