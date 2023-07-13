@@ -2,7 +2,23 @@
 
 # Data Base Model 
 
-<img width="780" alt="Screenshot 2023-07-13 at 10 58 18" src="https://github.com/manalijadhav97/LIQID/assets/32008754/4598cea8-70dd-477a-a9db-767bb6971657">
+![image](https://github.com/manalijadhav97/LIQID/assets/32008754/5f682d3a-54e6-469b-ab08-42d57b0c1d03)
+
+
+# Introduction to Objects : 
+
+1. User Object : Standard Salesforce Object , every client can be stored as a user in SF
+   Fields :
+   UserId
+   Email
+2. Client /Account Object : Standard Account SF Object can be used to store the Client's information.(Parent Object)
+3. Product Offering : This custom object holds the information on different products that the comapny owns. 
+   Record Types : (Wealth,Cash,Equity).
+4. Investement : This is a junction object for Client/Account and Product Offering object - this stores the investment options stored by our client with different product offering combinations.
+5. Financial Institutions : Custom Object holds the information on different types of financial instituations offering different products for investment.
+6. Portfolio Document : custome Object holds the Client/Accounts documents , used for investments further, it has has a child object Files, this is a standard SF object used to hold raw files/attchments.
+
+
 
 # Proposed Solution Approaches : 
 # Option 1 :
@@ -33,6 +49,21 @@ When using an external email service, you can store the email addresses of your 
 
 # Technical Design 
 
+Approach : 
+Keeping in mind the use-case & salesforce limits, the approch we went for was sending the emails was via scheduled batch class. 
+Batch approach was chosen keeping in mind the bulkifiation and to achieve scalability. This approach also gives us the flexibility to make accomdate any further business changes , considering the complexity. 
+
+# Assumptions 
+
+The logic is the objects at play here are : 
+1. Document__c - custome SF object , used to store the document related information. 
+Client__c - This custom object is created for testing purpose of scenario 2. 
+2. In reality the Client object can be a standard Account object and with Client Email (Formulae field : Standard User Object.Email)
+3. This is to extend our email limit. 
+(As only 5000 external emails can be sent out by an org, we can extend this limit by creating the user's in SF refer option1 under solution Approaches for more understanding.)
+4. A scheduled batch apex - which will run every 8 hrs - thrice a day will pick up Document__c object records for which email is not yet sent
+(This can be identified with field Notification_Status__c field set to New for Email notification not sent documents.)
+Furthermore, New document of type report can be inserted multiple times in a day for a client , but we would send out only single email (sumamry email) conatining the document names and files of all the updated documents. Sending one such sumamry email will help with email limit and will also not bombared the customer with updates.
 
 # Unit Test 
 Input 
