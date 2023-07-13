@@ -32,16 +32,19 @@
 Send Email using Scheduled Batch Apex. 
 
 Background : 
-Salesforce Essentials and Professional Edition: 250 emails per day per Salesforce license.
-Enterprise Edition: 500 emails per day per Salesforce license.
-Unlimited Edition: 1,000 emails per day per Salesforce license.
-Performance Edition: 3,000 emails per day per Salesforce license.
-Developer Edition: 15 emails per day.
-Keeping in mind that atleast Salesforce Essentials / Professional Edition will be used : 
-We have a client base of 4000 users , out of which 30% are to get new documents every week and email is to be send out each day 
+- Salesforce Essentials and Professional Edition: 250 emails per day per Salesforce license.
+- Enterprise Edition: 500 emails per day per Salesforce license.
+- Unlimited Edition: 1,000 emails per day per Salesforce license.
+- Performance Edition: 3,000 emails per day per Salesforce license.
+- Developer Edition: 15 emails per day.
+
+   Keeping in mind that atleast Salesforce Essentials / Professional Edition will be used : 
+We have a client base of 4000 users, out of which 30% are to get new documents every week and email is to be send out each day 
 Assume 30% od the client base (1200 clients) get new emails per day and 1 summary email per document type (4 types) 
 each client can receive max 4 emails per day - 1200*4 - 4800 emails per day - This is under SF external email limit of 5000 per day.
-But further more the customer base is to increase by 10% every quarter - to accomodate this requirement and make the approach more scalable, we propose to create a user object record for each client , by doing so we get the following ability as per Salesforce Essentials and Professional Edition license configration.
+
+   But further more the customer base is to increase by 10% every quarter - to accomodate this requirement and make the approach more scalable, we propose to create a user object record for each client , by doing so we get the following ability as per Salesforce Essentials and Professional Edition license configration.
+  
 1 user - 250 emails /day
 4000 users - 1,000,000 emails /day
 
