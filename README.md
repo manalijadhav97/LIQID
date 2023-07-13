@@ -6,6 +6,7 @@
 
 # Proposed Solution Approaches : 
 # Option 1 :
+
 Create 4000 users.
 
 Background : Salesforce Essentials and Professional Edition: 250 emails per day per Salesforce license.
@@ -24,11 +25,6 @@ We can send accumlated data of
 client email - Documnt Type - DocumentName,Files 
 
 When using an external email service, you can store the email addresses of your customers or recipients in the Contact object in Salesforce. By integrating your external email service with Salesforce, you can send emails directly from the external email service using the email addresses stored in the Contact records.
-
-
-# Option 3 : 
-External email - 5000
-Unlimited emails can be sent if the external email is a contact,person Account.
 
 
 # Flow Diagram : Current Approach 
