@@ -1,7 +1,11 @@
+/**
+ * @description       : The batch runs every 8 hours and sends notifications to clients
+ * @last modified on  : 07-13-2023
+**/
 public with sharing class SendEmailBatchClass implements Database.Batchable<sObject>,Database.RaisesPlatformEvents{
 
     public Database.QueryLocator start(Database.BatchableContext BC){
-        String query = 'SELECT Id,Name,Type__c,Notification_Status__c,Generation_Date__c,Customer_Notified_At__c,Client__r.Client_Email__c FROM Document__c WHERE Notification_Status__c=\'New\'';
+        String query = 'SELECT Id,Name,Type__c,Notification_Status__c,Generation_Date__c,Customer_Notified_At__c,Client__r.Client_Email__c FROM Document__c WHERE Notification_Status__c=\'New\' ORDER BY Client__r.Client_Email__c';
         return Database.getQueryLocator(query);
     }
 
@@ -82,3 +86,8 @@ public with sharing class SendEmailBatchClass implements Database.Batchable<sObj
         return attachments;
     }
 }
+
+// Calculation 
+// No of users - 4000
+// no of docu type - 4
+// maximum no of emails to send - 16000 *
