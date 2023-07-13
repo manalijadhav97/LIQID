@@ -31,14 +31,14 @@ External email - 5000
 Unlimited emails can be sent if the external email is a contact,person Account.
 
 
-#Flow Diagram : Current Approach 
+# Flow Diagram : Current Approach 
 
 <img width="780" alt="Screenshot 2023-07-13 at 10 58 31" src="https://github.com/manalijadhav97/LIQID/assets/32008754/b3acc2ec-7f9f-4ff1-931d-6d0e85e5c193">
 
-#Technical Design 
+# Technical Design 
 
 
-#Unit Test 
+# Unit Test 
 Input 
 Insert new Document :
 Notification_Status__c = New 
