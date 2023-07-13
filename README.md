@@ -4,6 +4,31 @@
 
 <img width="780" alt="Screenshot 2023-07-13 at 10 58 18" src="https://github.com/manalijadhav97/LIQID/assets/32008754/4598cea8-70dd-477a-a9db-767bb6971657">
 
+# Proposed Solution Approaches : 
+Option 1 -
+Create 4000 users.
+
+Background : Salesforce Essentials and Professional Edition: 250 emails per day per Salesforce license.
+Enterprise Edition: 500 emails per day per Salesforce license.
+Unlimited Edition: 1,000 emails per day per Salesforce license.
+Performance Edition: 3,000 emails per day per Salesforce license.
+Developer Edition: 15 emails per day.
+
+1 user - 250 emails /day
+4000 users - 1,000,000 emails /day
+For this approach we would have to create an user object record for each Client.
+
+Option 2 - 
+Middle ware to handle sending emails 
+We can send accumlated data of 
+client email - Documnt Type - DocumentName,Files 
+
+When using an external email service, you can store the email addresses of your customers or recipients in the Contact object in Salesforce. By integrating your external email service with Salesforce, you can send emails directly from the external email service using the email addresses stored in the Contact records.
+
+
+Option 3 : 
+External email - 5000
+Unlimited emails can be sent if the external email is a contact,person Account.
 
 #Flow Diagram : 
 
