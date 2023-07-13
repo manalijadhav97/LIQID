@@ -5,7 +5,7 @@
 <img width="780" alt="Screenshot 2023-07-13 at 10 58 18" src="https://github.com/manalijadhav97/LIQID/assets/32008754/4598cea8-70dd-477a-a9db-767bb6971657">
 
 # Proposed Solution Approaches : 
-# Option 1 -
+# Option 1 :
 Create 4000 users.
 
 Background : Salesforce Essentials and Professional Edition: 250 emails per day per Salesforce license.
@@ -18,7 +18,7 @@ Developer Edition: 15 emails per day.
 
 For this approach we would have to create an user object record for each Client.
 
-# Option 2 - 
+# Option 2 :
 Middle ware to handle sending emails 
 We can send accumlated data of 
 client email - Documnt Type - DocumentName,Files 
