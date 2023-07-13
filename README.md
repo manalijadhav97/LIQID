@@ -1,6 +1,6 @@
 # Technical Design 
 
-# Data Base Model 
+# Database Model 
 
 ![image](https://github.com/manalijadhav97/LIQID/assets/32008754/5f682d3a-54e6-469b-ab08-42d57b0c1d03)
 
@@ -16,7 +16,7 @@
    Record Types : (Wealth,Cash,Equity).
 4. Investement : This is a junction object for Client/Account and Product Offering object - this stores the investment options stored by our client with different product offering combinations.
 5. Financial Institutions : Custom Object holds the information on different types of financial instituations offering different products for investment.
-6. Portfolio Document : custome Object holds the Client/Accounts documents , used for investments further, it has has a child object Files, this is a standard SF object used to hold raw files/attchments.
+6. Portfolio Document : custom Object holds the Client/Accounts documents , used for investments further, it has has a child object Files, this is a standard SF object used to hold raw files/attchments.
 
 
 
