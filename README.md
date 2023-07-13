@@ -66,8 +66,13 @@ Client__c - This custom object is created for testing purpose of scenario 2.
 Furthermore, New document of type report can be inserted multiple times in a day for a client , but we would send out only single email (sumamry email) conatining the document names and files of all the updated documents. Sending one such sumamry email will help with email limit and will also not bombared the customer with updates.
 
 # Unit Test 
-Input 
-Insert new Document :
+
+For simplicity : We can Insert a Document__c object's record from Docuemnt__c Tab 
+Here : Assumption is that the web service exposed will insert the Document__c object , link it to the Client (Data Model reference is Client/Account Object), along with Files(Standard Files Object in SF).
+
+Input :
+Insert new Document 
+
 Notification_Status__c = New 
 Document Type : Report
 Client : test@gmail.com
