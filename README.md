@@ -1,9 +1,9 @@
 # Technical Design 
 
-# Database Model 
-
+# Solutions 
+## Scenario 1
+### Database Model 
 ![image](https://github.com/manalijadhav97/LIQID/assets/32008754/5f682d3a-54e6-469b-ab08-42d57b0c1d03)
-
 
 # Introduction to Objects : 
 
@@ -16,10 +16,17 @@
    Record Types : (Wealth,Cash,Equity).
 4. Investement : This is a junction object for Client/Account and Product Offering object - this stores the investment options stored by our client with different product offering combinations.
 5. Financial Institutions : Custom Object holds the information on different types of financial instituations offering different products for investment.
-6. Portfolio Document : custom Object holds the Client/Accounts documents , used for investments further, it has has a child object Files, this is a standard SF object used to hold raw files/attchments.
+6. Portfolio Document : Custom Object holds the Client/Accounts documents , used for investments further, it has has a child object Files, this is a standard SF object used to hold raw files/attchments.
 
+### Questions to ask 
+- What client information needs to be captured during the onboarding process?
+- What are the specific attributes and details of each investment product?
+- What information is required to create and manage investments for clients?
+- Are there any specific validations or rules for data entry?
+- Are there any integrations required with external systems or APIs (for example with Partner system)?
+- What are the important metrics and reports that need to be tracked and generated?
 
-
+## Scenario 2
 # Proposed Solution Approaches : 
 # Option 1 :
 
@@ -43,7 +50,7 @@ client email - Documnt Type - DocumentName,Files
 When using an external email service, you can store the email addresses of your customers or recipients in the Contact object in Salesforce. By integrating your external email service with Salesforce, you can send emails directly from the external email service using the email addresses stored in the Contact records.
 
 
-# Flow Diagram : Current Approach 
+# Implemented Solution : Option 1
 
 <img width="780" alt="Screenshot 2023-07-13 at 10 58 31" src="https://github.com/manalijadhav97/LIQID/assets/32008754/b3acc2ec-7f9f-4ff1-931d-6d0e85e5c193">
 
